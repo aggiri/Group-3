@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clinical Trial Data Management</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./app.js"></script>
+ </head>
+ <!--
+  <body
+	  background="https://1.bp.blogspot.com/-sTxAHAxirGM/WVbAe2098nI/AAAAAAABENs/_I5sYMYgLOUzaIE7FfF4qdGX-hoAkq9SgCLcBGAs/s1600/Blog_20170624_113552.jpg">  
+ <body background="https://www.hopkinsmedicine.org/sebin/t/o/GettyImages-158649166_open2.jpg"></body>
+ <body background="https://gumc.georgetown.edu/wp-content/uploads/2020/05/SARS-CoV-2-virus-antibodies-1024x576.png"></body>
+ <body background="https://wallpaperset.com/w/full/b/f/a/455899.jpg"></body>
+ <body background="https://mk0labiotecheugl43g7.kinstacdn.com/wp-content/uploads/2021/02/Vaccine-platforms-future-pandemics.jpg"></body>
+ <body background="https://i.pinimg.com/originals/00/d5/10/00d5107ac760d88837f7d203448fb603.jpg"></body>
+ <body background="https://bestanimations.com/Science/Biology/Drugs/pills-tablets-prescription-drugs-animated-gif-image-10.gif"></body>
+ <body background="https://gifimage.net/wp-content/uploads/2017/10/medical-gif-11.gif"></body>
+ color tables falling in rose color
+ <body background="https://media1.tenor.com/images/a64b087843d5cdc104698aecfe0dd8b6/tenor.gif?itemid=11956886"></body>
+ <body background="https://static01.nyt.com/images/2017/04/10/upshot/11up-healthmeds/11up-healthmeds-articleLarge.gif"></body>
+plain good one
+  <body background="https://st2.depositphotos.com/1177973/6108/i/450/depositphotos_61089391-stock-photo-drug-vaccine-in-vial.jpg"></body> 
+vaccine save lives -- good one
+  <body background="https://media.tenor.com/images/e947bbdb11c6037c809f2716734826ff/tenor.gif"></body> 
+  	<body background="https://cdn.dribbble.com/users/187497/screenshots/2640328/als-pills01.gif"></body> 
+	
+	</body>
+	-->
+	<body background="https://cdn.dribbble.com/users/187497/screenshots/2640328/als-pills01.gif"></body> 
+	
+<h1><center> Clinical Trial Data Management </center></h1>
+  <div class="section">
+  	    <div align="left"><b>Contract deployed at: </b><div id="confAddress"></div></div>
+		<!--  <div align="left"><b>Regulator Address </b><div id="regAddress"></div></div> -->
+  	
+	   <!-- <div class="right"><b>Contract Creator: <div id="tentantAddress"></b></div></div> -->
+  </div>
+<div class="clear"></div>
+<hr/>
+
+
+<div class="box">
+	<h3 style="text-align: center;" >Vaccine Manufacturer Enrollment Process</h3> 
+	
+		<label>Vaccine Manufacturer Name:</label> 
+		<input type="text" class="inumber"  id="vm"/> <br>
+		<label>Number of Dose:</label> 
+		<input type="number" class="inumber"  id="nd"/> <br>
+		<div class="wrapper">
+		  <button id="vmsubmit">Submit</button>
+		   <span id="Result"></span>
+		</div>
+	  <div >
+		  <br>
+		 <label><b>Message:</b></label> <span id="vmi"></span>
+	  </div>
+	 </div>
+  
+	 <div class="box">
+		<h3 style="text-align: center;" >Vaccine Manufacturer Approval Process</h3> 
+		
+			<label>Vaccine Manufacturer Address:</label> 
+			<input type="text" class="inumber"  id="vma"/> <br>
+			 <div class="wrapper">
+			  <button id="vmasubmit">Submit</button>
+			   <span id="Result"></span>
+			</div>
+		  <div >
+			 <label><b>Message:</b></label> <span id="vmau"></span>
+		  </div>
+		 </div>
+
+
+		 <div class="box">
+			<h3 style="text-align: center;" >Physical Investigator Enrollment Process</h3> 
+			
+				<label>Physical Investigator:</label> 
+				<input type="text" class="inumber"  id="piname"/> <br>
+				<label>Physical Investigator ID:</label>
+				<input type="text" id="piid" /><br>	
+				 
+			
+				<div class="wrapper">
+				  <button id="piesubmit">Submit</button>
+				   <span id="Result"></span>
+				</div>
+			  <div >
+				  <br>
+				 <label><b>Message:</b></label> <span id="piem"></span>
+			  </div>
+			 </div>
+			
+			
+			 <div class="box">
+				<h3 style="text-align: center;" >Physical Investigator Approval Process</h3> 
+				
+					<label>Physical Investigator Address:</label> 
+					<input type="text" class="inumber"  id="pia"/> <br>
+					 <div class="wrapper">
+					  <button id="piasubmit">Submit</button>
+					   <span id="Result"></span>
+					</div>
+				  <div >
+					<br>
+					 <label><b>Message:</b></label> <span id="piau"></span>
+				  </div>
+				 </div>
+
+
+
+<div class="box">
+<h3 style="text-align: center;" >Clinic Enrollment Process</h3> 
+
+	<label>Clinic Name:</label> 
+	<input type="text" class="inumber"  id="cn"/> <br>
+	<label>Clinic Location:</label>
+	<input type="text" id="cl" /><br>	
+	<label>Clinic ID:</label>
+	<input type="text" id="ci"/>  <br>
+
+
+	<div class="wrapper">
+  	<button id="submit">Submit</button>
+  	 <span id="Result"></span>
+	</div>
+  <div >
+	  <br>
+	 <label><b>Message:</b></label> <span id="i"></span>
+  </div>
+ </div>
+
+
+ <div class="box">
+	<h3 style="text-align: center;" >Clinic Approval Process</h3> 
+	
+		<label>Clinic Address:</label> 
+		<input type="text" class="inumber"  id="clia"/> <br>
+		 <div class="wrapper">
+		  <button id="cliasubmit">Submit</button>
+		   <span id="Result"></span>
+		</div>
+	  <div >
+		<br>
+		 <label><b>Message:</b></label> <span id="cliau"></span>
+	  </div>
+	 </div>
+
+ <div class="box">
+	<h3 style="text-align: center;" >Volunteer Enrolment Process</h3> 
+	
+		<label>DoB:</label> 
+		<input type="text" class="inumber"  id="dob"/> <br>
+		<label>Gender [Enter Number]:</label> 
+		<input type="number" class="inumber"  id="gen"/> <br>
+		<label>Medical Precondition Code:</label> 
+		<input type="text" class="inumber"  id="mpc"/> <br>
+		<label>Other Vaccine Taken [T|F]:</label> 
+		<input type="text" class="inumber"  id="ova"/> <br>
+		<label>Vaccine Name:</label> 
+		<input type="text" class="inumber"  id="vn"/> <br>
+		<label>Vaccine Date:</label> 
+		<input type="text" class="inumber"  id="vd"/> <br>
+		 <div class="wrapper">
+		  <button id="vlntresubmit">Submit</button>
+		   <span id="Result"></span>
+		</div>
+	  <div >
+		<br>
+		 <label><b>Message:</b></label> <span id="vlntre"></span>
+	  </div>
+	 </div>
+
+
+	 <div class="box">
+		<h3 style="text-align: center;" >Volunteer Approval Process</h3> 
+		
+			<label>Volunteer Address:</label> 
+			<input type="text" class="inumber"  id="vlntradd"/> <br>
+			 <div class="wrapper">
+			  <button id="vlntrauthsubmit">Submit</button>
+			   <span id="Result"></span>
+			</div>
+		  <div >
+			<br>
+			 <label><b>Message:</b></label> <span id="vlntrauth"></span>
+		  </div>
+		 </div>
+
+
+		 <div class="box">
+			<h3 style="text-align: center;" >Mark Vaccination Done</h3> 
+			
+				<label>Volunteer Address:</label> 
+				<input type="text" class="inumber"  id="markvlntradd"/> <br>
+				<label>Dose Number:</label> 
+				<input type="number" class="inumber"  id="doseno"/> <br>
+				
+				 <div class="wrapper">
+				  <button id="markvacsubmit">Submit</button>
+				   <span id="Result"></span>
+				</div>
+			  <div >
+				<br>
+				 <label><b>Message:</b></label> <span id="markvac"></span>
+			  </div>
+			 </div>
+
+
+			 
+		 <div class="box">
+			<h3 style="text-align: center;" > Physical Investigation for SAE (Serious Adverse Event)</h3> 
+			
+				<label>Volunteer Address:</label> 
+				<input type="text" class="inumber"  id="vlntraddsae"/> <br>
+				<label>Dose Number:</label> 
+				<input type="number" class="inumber"  id="dosenosae"/> <br>
+				<label>SAE ID:</label> 
+				<input type="text" class="inumber"  id="saeid"/> <br>
+				<div class="wrapper">
+				  <button id="setsaesubmit">Submit</button>
+				   <span id="Result"></span>
+				</div>
+			  <div >
+				<br>
+				 <label><b>Message:</b></label> <span id="setsae"></span>
+			  </div>
+			 </div>
+
+
+
+			 <div class="box">
+				<h3 style="text-align: center;" >Monitoring Vaccinated Volunteer</h3> 
+				
+					<label>Volunteer Address:</label> 
+					<input type="text" class="inumber"  id="vlntraddmonitor"/> <br>
+					<label>Dose Number:</label> 
+					<input type="number" class="inumber"  id="dosenomonitor"/> <br>
+					<label>Volunteer Recovery status [T|F]:</label> 
+					<input type="text" class="inumber"  id="issaerec"/> <br>
+					<label>Is Monitoring Completed [T|F]:</label> 
+					<input type="text" class="inumber"  id="ismoncompl"/> <br>
+					<label>Volunteer Follow up Status:</label> 
+					<input type="text" class="inumber"  id="volfollowup"/> <br>
+					<label>Lab Result:</label> 
+					<input type="text" class="inumber"  id="labresult"/> <br>
+				
+					 <div class="wrapper">
+					  <button id="monvolsubmit">Submit</button>
+					   <span id="Result"></span>
+					</div>
+				  <div >
+					<br>
+					 <label><b>Message:</b></label> <span id="monvolmsg"></span>
+				  </div>
+				 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 <div class="box">
+			<div class="wrapper">
+				<button id="Publicdatasubmit">Get Info</button>
+				 <span id="Result"></span>
+			  </div>
+			 <b>Total Partially Vaccinated Volunteers : </b><span id="toparvac"></span>
+			 <br>
+			<b>Total Vaccinated Completely : </b><span id="tovacc"> </span>
+			<br>
+		  <b>Total Valid Volunteers : </b><span id="tovalvol"></span>
+		  <br>
+		  <b>Total Volunteers Affected (SAE Detected) : </b><span id="tovolaff"></span>
+		  <br>
+		  <b>Total Volunteers Cured post SAE Detection: </b><span id="tovolcur"></span>
+		  <br>
+		  
+		  <b>Total Number of Dose for this Vaccine: </b><span id="noofdose"></span>
+		  <br>
+		
+		 <!-- <div class="right"><b>Contract Creator: <div id="tentantAddress"></b></div></div> -->
+	</div>
+  <div class="clear"></div>
+
+
+
+
+<hr/>
+
+
+
+
+</body>
+<br><br>
+<div class="box1">
+
+
+<div align="right"> <p style="font-size:10px">© Group 3 of Cohort 6 Blockchain Talentsprint 2021 </p></div> 
+</div>
+</html> 
